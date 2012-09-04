@@ -9,10 +9,11 @@ AddTabularPattern!  custom_tabs     /[^ ]\+/l2
 
 AddTabularPattern!    equals_align           /=
 AddTabularPattern!    colon_align            /^[^:]*/l0
-AddTabularPattern!    comma_align            /^[^,]*,/
+AddTabularPattern!    comma_align            /^[^,]*,\|^[^,]*$/
 AddTabularPattern!    comma_align_all        /[^,]*,/
 AddTabularPattern!    hash_colon_align       /\(^\s*\("[^"]*"\|'[^']*'\)\|:\)/l1
 AddTabularPattern!    dotted_method_chain    /^[^\.]*/l0
+AddTabularPattern!    first_line_equals      /=.*$\|^\s*\zs  [^=]\+$/
 
 let &cpo = s:save_cpo
 unlet s:save_cpo
