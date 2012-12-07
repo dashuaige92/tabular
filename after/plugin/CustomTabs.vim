@@ -8,7 +8,7 @@ set cpo&vim
 AddTabularPattern!  custom_tabs     /[^ ]\+/l2
 
 AddTabularPattern!    space_align        /\S\+/l1l0
-AddTabularPattern!    ampersand_align        /[^&]\+/l0
+AddTabularPattern!    ampersand_align        /\s*\zs&\ze\s*/
 AddTabularPattern!    equals_align           /^[^=]*/l0
 AddTabularPattern!    colon_align            /^[^:]*/l0
 AddTabularPattern!    comma_align            /^[^,]*,\|^[^,]*$/
